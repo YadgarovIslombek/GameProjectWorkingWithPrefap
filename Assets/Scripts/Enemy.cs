@@ -10,17 +10,18 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         
-        
+      car = GameObject.Find("car");  
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(car != null){
+        if(car){
 
         
-        if(Vector3.Distance(car.transform.position,transform.position)< 1.5f){
+        if(Vector3.Distance(car.transform.position,transform.position)< 1f){
             Destroy(car);
+            Application.LoadLevel(1);
         }
         } 
         

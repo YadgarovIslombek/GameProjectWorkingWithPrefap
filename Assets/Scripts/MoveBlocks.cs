@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class MoveBlocks : MonoBehaviour
 {
-    public Transform targetPosition;
+ 
     public float speed;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class MoveBlocks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position,targetPosition.position,Time.deltaTime*speed);
+        transform.Translate(Vector3.forward*Time.deltaTime*speed);
         
     }
 }
